@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/styleChecklist.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <section id="header">
+    <a href="#"><img src="img/Logo.png" class="logo" alt="" style=" width: 150px;"></a>
+    <div class="navbar">
+      <a href="login sign.html">Login</a>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Kategori
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="Category Clothes.html">Clothes</a>
+          <a href="Category Jeans.html">Jeans</a>
+        </div>
+      </div>
+      <a href="cart.html">Cart</a>
+    </div>
+  </section>
+  <!-- End Navbar -->
+
+  <!-- Payment -->
+  <div class="success-container">
+    <h1>Pembayaran Berhasil!</h1>
+    <p>Terima kasih atas pembayaran Anda.</p>
+    <p>Nomor transaksi: <span id="transactionNumber"></span></p>
+    <a href="list-order.html"><button class="button-checklist">Go To List Order</button></a>
+  </div>
+  <!-- End Payment -->
+
+  <script src="js/checklist.js"></script>
+
+</body>
+
+</html>
