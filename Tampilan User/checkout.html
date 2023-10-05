@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/styleCheckout.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <section id="header">
+    <a href="#"><img src="img/Logo.png" class="logo" alt="" style=" width: 150px;"></a>
+    <div class="navbar">
+      <a href="login sign.html">Login</a>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Kategori
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="Category Clothes.html">Clothes</a>
+          <a href="Category Jeans.html">Jeans</a>
+        </div>
+      </div>
+      <a href="cart.html">Cart</a>
+    </div>
+  </section>
+  <!-- End Navbar -->
+
+  <div class="container-fluid">
+    <section class="section">
+      <div class="section-title">Shipping Address</div>
+      <div class="section-content">
+        <h6>M ALFAN +62 817826191</h6>
+        <h6>
+          Jalan Raya Kota Mojokerto
+        </h6>
+        <button id="openModalBtn" class="button-checkout">Ganti Alamat</button>
+      </div>
+    </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h2>Ganti Alamat</h2>
+        <hr>
+        <form action="" method="post">
+          <div class="form-group">
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" required>
+          </div>
+          <div class="form-group">
+            <label for="kote">Kota:</label>
+            <input type="text" id="Kota" name="Kota" required>
+          </div>
+          <div class="form-group">
+            <label for="kode">Kode Pos:</label>
+            <input type="text" id="kode" name="kode" required>
+          </div>
+          <input type="submit" value="Ganti">
+        </form>
+        <br>
+        <button id="closeModalBtn">Close</button>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-title">Ordered Products</div>
+      <div class="section-content">
+        <table class="table-none">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Product Name</th>
+              <th>Total</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img height="131" width="203" src="img/Flannel.png" alt="Flannel Shirt" />
+              </td>
+              <td>Flannel Shirt</td>
+              <td>1</td>
+              <td>Rp. 100.000</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>
+                <img height="131" width="203" src="img/pullover.png" alt="Flannel Shirt" />
+              </td>
+              <td>Pullover Sweat</td>
+              <td>1</td>
+              <td>Rp. 400.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Payment Method</div>
+      <div class="section-content">
+        <div class="metode-wrapper">
+          <a href="#"><button class="button-cod" id="button-cod">Cash On Delivery (COD)</button></a>
+          <a href="#"><button class="button-transfer" id="button-transfer">Transfer Bank <br>
+              Virtual - Account  : 0000-1234-5678-91
+            </button></a>
+        </div>
+
+        <div id="modalTransfer" class="modalTransfer">
+          <div class="modalTransfer-content">
+
+            <button id="closeTransferBtn">Close</button>
+          </div>
+        </div>
+
+        <div class="order-wrapper">
+          <div class="total-pembayaran">
+            Total Pembayaran: <span>Rp. 500.000</span>
+          </div>
+          <a href="checklist.html"><button class="button-payment">Buy Now</button></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/checkout.js"></script>
+
+</body>
+
+</html>
