@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelola Toko/Pelanggan</title>
+    <link rel="stylesheet" href="css/style11-15.css" />
+    <style>
+      table tbody tr:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .btn{
+          background:blueviolet;
+          color: #fff;
+        }
+  
+        .btn:hover{
+          cursor: pointer;
+          background-color: gray;
+        }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex">
+      <!-- awal sidebar -->
+      <div class="sidebar">
+        <ul style="margin-top: 0">
+          <li style="list-style: none"><a style="text-decoration: none; color: white" href="TampilanDashboardAdmin.html"><img src="img/Home.png" alt="" style="width: 18px; height: 21px; margin-right: 8px;">Dashboard</a></li>
+          <li style="list-style: none"><a style="text-decoration: none; color: white" href="kelolapesanan.html"><img src="img/Bag.png" alt="" style="width: 23px; height: 26px; margin-right: 8px;">Manage Order</a></li>
+          <li class="lidropdown" style="list-style: none">
+            <a href=""> <img src="img/Category.png" alt="" style="width: 23px; height: 26px; margin-right: 8px;"></a>Manage Shop
+            <img src="img/Path.png" style="margin-left: 50px" alt="" />
+            <div class="dropdown">
+              <ul>
+                <li style="list-style: none"><a href="KelolaKategori.html">Category</a></li>
+                <li style="list-style: none"><a href="KelolaProduk.html">Product</a></li>
+                <li style="list-style: none"><a href="KelolaMetode.html">Payment method</a></li>
+              </ul>
+            </div>
+          </li>
+          <li style="list-style: none"><a style="text-decoration: none; color: white" href="KelolaAdmin.html"><img src="img/Profile.png" alt="" style="width: 23px; height: 26px; margin-right: 8px;">Manage Admin</a></li>
+          <li style="list-style: none"><a style="text-decoration: none; color: white" href="KelolaPelanggan.html"><img src="img/3 User.png" alt="" style="width: 23px; height: 26px; margin-right: 8px;">Manage Costumer</a></li>
+          <li style="list-style: none"><a style="text-decoration: none; color: white" href="login_admin.html"><img src="img/Logout.png" alt="" style="width: 23px; height: 26px; margin-right: 8px;">Log Out</a></li>
+        </ul>
+      </div>
+      <!-- akhir sidebar -->
+
+      <!-- konten -->
+      <div class="konten">
+        <div class="content">
+          <div class="isi">
+            <div class="pertama">
+                <div style="width: 40%;">
+                    <h1>List Costumer</h1>
+                </div>
+                <!-- <div style="width: 19%; display: flex; justify-content: center;">
+                    <button>Add Category</button>
+                </div> -->
+            </div>
+            <div class="kedua">
+              <div class="kiri">
+                <div class="prtm">Show</div>
+                <div class="kda">
+                  <input style="width: 80%;" type="number" id="showEntries" min="1" max="100" placeholder="All">
+                </div>
+                <div class="ktg">Entries</div>
+              </div>
+              <div class="kanan">
+                <input type="text" id="searchInput" placeholder="Search" style="width: 90%; text-align: left;">
+              </div>
+            </div>
+            <div style="display: flex; justify-content: center;">
+
+            <table id="dataTable" style="width: 100%;">
+                <thead style="background-color: rgb(172, 181, 233);">
+                    <tr>
+                        <th style="width: 10%;">NO</th>
+                        <th style="width: 10%;">Id_pelanggan</th>
+                        <th style="width: 15%;">Name</th>
+                        <th style="width: 15%;">Username</th>
+                        <th style="width: 15%;">No.Hp</th>
+                        <th style="width: 15%;">E-mail</th>
+                        <th style="width: 20%;">Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td>M Alafan</td>
+                        <td>Alfan123</td>
+                        <td>0821xxxx</td>
+                        <td>alfan123@gmail.com</td>
+                        <td>Jl. Raya Mojokerto</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td></td>
+                        <td>Bagas</td>
+                        <td>Bagas123</td>
+                        <td>0812xxxx</td>
+                        <td>Bagass23@gmail.com</td>
+                        <td>Jl. Lurus Mojokerto</td>
+                    </tr>
+                    <tr style="height: 150px;">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bbawah">
+                <div class="aw">
+                  <div class="b1 btn" onclick="previousPage()">Previous</div>
+                  <div class="b2" id="currentPage">1</div>
+                  <div class="b3 btn" onclick="nextPage()">Next</div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- akhir konten -->
+    </div>
+    <script src="js/KelolaPelanggan.js"></script>
+  </body>
+</html>

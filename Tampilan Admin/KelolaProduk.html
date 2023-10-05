@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelola Toko/Produk</title>
+  <link rel="stylesheet" href="css/style11-15.css" />
+
+  <style>
+    table tbody tr:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    .btn{
+        background:blueviolet;
+        color: #fff;
+      }
+
+      .btn:hover{
+        cursor: pointer;
+        background-color: gray;
+      }
+  </style>
+</head>
+
+<body>
+  <div style="display: flex">
+    <!-- awal sidebar -->
+    <div class="sidebar">
+      <ul style="margin-top: 0">
+        <li style="list-style: none"><a style="text-decoration: none; color: white"
+            href="TampilanDashboardAdmin.html"><img src="img/Home.png" alt=""
+              style="width: 18px; height: 21px; margin-right: 8px;">Dashboard</a></li>
+        <li style="list-style: none"><a style="text-decoration: none; color: white" href="kelolapesanan.html"><img
+              src="img/Bag.png" alt="" style="width: 23px; height: 26px; margin-right: 8px;">Manage Order</a></li>
+        <li class="lidropdown" style="list-style: none">
+          <a href=""> <img src="img/Category.png" alt="" /
+              style="width: 23px; height: 26px; margin-right: 8px;"></a>Manage Shop
+          <img src="img/Path.png" style="margin-left: 50px" alt="" />
+          <div class="dropdown">
+            <ul>
+              <li style="list-style: none"><a href="KelolaKategori.html">Category</a></li>
+              <li style="list-style: none"><a href="KelolaProduk.html">Product</a></li>
+              <li style="list-style: none"><a href="KelolaMetode.html">Payment method</a></li>
+            </ul>
+          </div>
+        </li>
+        <li style="list-style: none"><a style="text-decoration: none; color: rgb(172, 181, 233)"
+            href="14.KelolaAdmin.html"><img src="img/Profile.png" alt=""
+              style="width: 23px; height: 26px; margin-right: 8px;">Manage Admin</a></li>
+        <li style="list-style: none"><a style="text-decoration: none; color: rgb(172, 181, 233)"
+            href="15.KelolaPelanggan.html"><img src="img/3 User.png" alt=""
+              style="width: 23px; height: 26px; margin-right: 8px;">Manage Costumer</a></li>
+        <li style="list-style: none"><a style="text-decoration: none; color: rgb(172, 181, 233)" href="login_admin.html"><img
+              src="img/Logout.png" alt="" style="width: 23px; height: 26px; margin-right: 8px;">Log Out</a></li>
+      </ul>
+    </div>
+    <!-- akhir sidebar -->
+
+    <!-- konten -->
+    <div class="konten">
+      <div class="content">
+        <div class="isi">
+          <div class="pertama">
+            <div style="width: 40%;">
+              <h1>Produk</h1>
+            </div>
+            <div style="width: 19%; display: flex; justify-content: center;">
+              <button><a href="">Add Category</a></button>
+            </div>
+          </div>
+          <div class="kedua">
+            <div class="kiri">
+              <div class="prtm">Show</div>
+              <div class="kda">
+                <input style="width: 80%;" type="number" id="showEntries" min="1" max="100" placeholder="All">
+              </div>
+              <div class="ktg">Entries</div>
+            </div>
+            <div class="kanan">
+              <input type="text" id="searchInput" placeholder="Search" style="width: 90%; text-align: left;">
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center;">
+
+            <table id="dataTable" style="width: 100%;">
+              <thead style="background-color:rgb(172, 181, 233);">
+                <tr>
+                  <th style="width: 10%;">NO</th>
+                  <th style="width: 20%;">Products</th>
+                  <th style="width: 27.5%;">Product Name</th>
+                  <th style="width: 27.5%;">Category</th>
+                  <th style="width: 15%;">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><img src="img/Flannel.png" alt="flannel"></td>
+                  <td>Flannel Shirt</td>
+                  <td>Clothes</td>
+                  <td>Rp100.000</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><img src="img/Turtleneck.png" alt="turtleneck"></td>
+                  <td>Turtle Neck</td>
+                  <td>Clothes</td>
+                  <td>Rp50.000</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><img src="img/Cardingan.png" alt="cardingan"></td>
+                  <td>Cardingan</td>
+                  <td>Clothes</td>
+                  <td>Rp500.000</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><img src="img/blouse.png" alt="blouse"></td>
+                  <td>Blouse</td>
+                  <td>Clothes</td>
+                  <td>Rp80.000</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><img src="img/fleece.png" alt="fleece"></td>
+                  <td>Fleece</td>
+                  <td>Clothes</td>
+                  <td>Rp150.000</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td><img src="img/pullover.png" alt="pulloversweat"></td>
+                  <td>Pullover Sweat</td>
+                  <td>Clothes</td>
+                  <td>Rp400.000</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td><img src="img/Baggy-Jeans.png" alt="baggy"></td>
+                  <td>Baggy Jeans/td>
+                  <td>Jeans</td>
+                  <td>Rp200.000</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td><img src="img/Classic-Fit.png" alt="classicfit"></td>
+                  <td>Classicfit</td>
+                  <td>Jeans</td>
+                  <td>Rp250.000</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td><img src="img/Slimfit-Jeans.png" alt="slimfit"></td>
+                  <td>Slimfit Jeans</td>
+                  <td>Jeans</td>
+                  <td>Rp200.000</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td><img src="img/skinny.png" alt="skinny"></td>
+                  <td>Skinny Jeans</td>
+                  <td>Jeans</td>
+                  <td>Rp230.000</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td><img src="img/boyfriend.png" alt="boyfriend"></td>
+                  <td>Boyfriend</td>
+                  <td>Jeans</td>
+                  <td>Rp280.000</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td><img src="img/straight.png" alt="straight"></td>
+                  <td>Straight Jeans</td>
+                  <td>Jeans</td>
+                  <td>Rp120.000</td>
+                </tr>
+                <tr style="height: 150px;">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="bbawah">
+            <div class="aw">
+              <div class="b1 btn" onclick="previousPage()">Previous</div>
+              <div class="b2" id="currentPage">1</div>
+              <div class="b3 btn" onclick="nextPage()">Next</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir konten -->
+  </div>
+  <script src="js/KelolaProduk.js"></script>
+</body>
+</html>
